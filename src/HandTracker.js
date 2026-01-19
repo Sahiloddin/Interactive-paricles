@@ -4,7 +4,7 @@ import { Camera } from '@mediapipe/camera_utils';
 export class HandTracker {
     constructor() {
         this.results = null;
-        this.videoElement = document.getElementById('input_video');
+        this.videoElement = document.querySelector('input_video');
 
         // Settings for robust tracking
         this.hands = new Hands({
@@ -43,8 +43,8 @@ export class HandTracker {
             onFrame: async () => {
                 await this.hands.send({ image: this.videoElement });
             },
-            width: 1280,
-            height: 720
+            width: 640,
+            height: 480
         });
 
         camera.start()
