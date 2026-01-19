@@ -49,7 +49,8 @@ const clock = new THREE.Clock();
 
 function animate() {
   requestAnimationFrame(animate);
-
+ctx.fillstyle="0b0b0f";
+ctx.fillRect(0,0,canvas.width,canvas.height);
   const elapsedTime = clock.getElapsedTime();
 
   // Get Data
