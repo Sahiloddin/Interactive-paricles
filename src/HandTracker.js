@@ -53,7 +53,7 @@ export class HandTracker {
             })
             .catch(err => {
                 console.error("Camera error:", err);
-                this.updateStatus(`Camera Error: ${err.message || 'Permission denied'}`);
+                this.updateStatus("Camera Error:" + err.message || 'Permission denied');
             });
     }
 
